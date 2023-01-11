@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <center>
+    <ul>
+      <%if(messages.success_msg){ %>
+      <li><%= messages.success_msg %></li><%} %>
+    </ul>
+    <ul>
+      <%if(messages.error){ %>
+      <li><%= messages.error  %></li><%} %>
+    </ul>
+    <div class="container">
+      <h1>AGREGAR TAREA</h1>
+      <form action="/users/dashboard" method="post">
+      <div>
+        <input type="text" id="task" name="task" placeholder="Agrega tu tarea" required="">
+      </div>
+      <div>
+        <input type="submit" value="Agregar Tarea">
+      </div>
+     
+    </form>
+    <a Href="/users/login">CERRAR SESION</a>
+   
+    </div>
+  </center>
+  
+
+</body>
+</html>
